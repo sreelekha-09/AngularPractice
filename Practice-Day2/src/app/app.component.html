@@ -1,0 +1,14 @@
+<h1>USERS MANAGEMENT</h1>
+<h3 appCustomDirectiveUsingRenderer>Create User</h3>
+<div>
+  <div>
+    <app-new-user></app-new-user>
+  </div>
+  
+  <h2 appCustom>USERS LIST</h2>
+  <div>
+    <app-user-list *ngFor='let user of users; let id =index' [user]="user" [id]="id"></app-user-list>
+  </div>
+</div>
+<p *appCustomStructuralDirective>STRUCTURAL DIRECTIVE</p>
+

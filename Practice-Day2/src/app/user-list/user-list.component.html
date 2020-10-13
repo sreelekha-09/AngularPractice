@@ -1,0 +1,11 @@
+<div>
+    <h4>{{user.name}}</h4>
+    <br>
+    <p>User status is {{user.status}}</p>
+    <div *ngIf="user.status==='offline'; else elseBlock">
+        <button (click)="updateStatus('online')">Online</button>
+    </div>
+    <ng-template #elseBlock>
+        <button (click)="updateStatus('offline')">Offline</button>
+    </ng-template>
+</div>
