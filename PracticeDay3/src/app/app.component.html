@@ -1,0 +1,24 @@
+<div>
+    <label>Title</label>
+    <input type="text" #title>
+    <label>Content</label>
+    <input type="text" #content>
+    <button (click)="addPosts(title.value,content.value)">ADDPOSTS</button>
+</div>
+<div>
+    <h3>POSTS</h3>
+    <ul>
+        <li *ngFor='let post of posts'>
+            <h4>{{post.title}}</h4>
+            <p>{{post.content}}</p>
+            
+        </li>
+    </ul>
+</div>
+<div>
+    <button (click)='deletePosts()'>DELETE</button>
+</div>
+<div *ngIf='error'>
+    <h3>ERROR</h3>
+    <p>{{error}}</p>
+</div>
