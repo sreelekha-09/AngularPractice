@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="list-group">
+        <a
+          [routerLink]="['/admins',admin.id]"
+          [queryParams]="{writable:admin.id===1?'1':'0'}"
+          fragment="fragment"
+          class="list-group-item"
+          *ngFor="let admin of admins">
+          {{ admin.name }}
+        </a>
+      </div>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+</div>
