@@ -1,0 +1,23 @@
+<div class="container">
+    <div>
+        <button class="btn btn-secondary" (click)="userSignIn=true">SIGN IN</button> <br> <br>
+    </div>
+    <div>
+        <button class="btn btn-secondary" (click)="userSignIn=false">SIGN OUT</button>
+    </div>
+    <div>
+        <app-child #child 
+        (alertEvent)="alertName($event)"
+        [signIn]="userSignIn"></app-child>
+    </div>
+    <div>
+        {{child.name}} <br>
+        <button class="btn btn-secondary" (click)="child.greetName()">Greet</button><br><br>
+    </div>
+    <div>
+        <button class="btn btn-secondary" (click)="sendMessage1()">Message_1</button>
+        <br><br>
+        <button class="btn btn-secondary" (click)="sendMessage2()">Message_2</button>
+    </div>
+</div>
+

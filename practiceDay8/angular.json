@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "practice6": {
+    "practice8": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/practice6",
+            "outputPath": "dist/practice8",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "practice6:build"
+            "browserTarget": "practice8:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "practice6:build:production"
+              "browserTarget": "practice8:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "practice6:build"
+            "browserTarget": "practice8:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "practice6:serve"
+            "devServerTarget": "practice8:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "practice6:serve:production"
+              "devServerTarget": "practice8:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "practice6"
+  "defaultProject": "practice8"
 }

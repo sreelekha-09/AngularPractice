@@ -1,0 +1,15 @@
+<div class="container">
+  <label for="username">username</label>
+  <input type="text" [ngModel]="username"
+  (ngModelChange)="username=$event">
+  {{username}}
+  <br>
+  <label for="firstname">firstname</label>
+  <input type="text" [ngModel]="firstname"
+  (ngModelChange)="greetUser($event)">
+  {{firstname}}
+  <br>
+  <label for="lastname">lastname</label>
+  <input type="text" #lastname>
+</div>
+<app-parent></app-parent>
